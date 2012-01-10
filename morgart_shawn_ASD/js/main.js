@@ -1,10 +1,19 @@
-// ASD: 12-01: Project 1
+// ASD: 12-01: Project 2
 
 // Author: Shawn R. Morgart
 
 //Wait until the DOM is ready.
 
 $(function(){
+        
+        $.ajax({
+                url:      'xhr/list.json',
+                type:     'GET',
+                dataType: 'json',
+                success:  function(response){                                                                                    
+                        console.log(response);
+                        }
+                });
 
         // Form Validation for "General Data" tab on "Add New Client" page.
 
