@@ -1,0 +1,104 @@
+{
+    "resiContacts" :[
+        {
+            "fname": "John",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "johndoe@email.com"
+        },
+        {
+            "fname": "Jane",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "janedoe@email.com"
+        },
+        {
+            "fname": "Bill",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "billdoe@email.com"
+        },
+        {
+            "fname": "Bob",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "bobdoe@email.com"
+        },
+        {
+            "fname": "Jim",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "jimdoe@email.com"
+        },
+        {
+            "fname": "James",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "jamesdoe@email.com"
+        },
+        {
+            "fname": "Harry",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "harrydoe@email.com"
+        },
+        {
+            "fname": "Ron",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "rondoe@email.com"
+        },
+        {
+            "fname": "Mary",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+            "zip": "12345",
+            "phone": "987-765-5432",
+            "email": "marydoe@email.com"
+        },
+        {
+            "fname": "Will",
+            "lname": "Doe",
+            "street": "123 Main St.",
+            "city": "Anytown",
+            "state": "Mystate",
+             "zip": "12345",
+             "phone": "987-765-5432",
+             "email": "willdoe@email.com"
+        }
+    
+]};
