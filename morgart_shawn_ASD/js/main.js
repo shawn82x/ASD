@@ -7,25 +7,46 @@
 $(function(){
         
         $.ajax({
-                url:      'xhr/list.php',
+                url:      'xhr/list.json',
                 type:     'GET',
                 dataType: 'json',
                 success:  function(response){                                                                                    
-                        for(var i=0, j=response.resiContacts.length; i<j; i++){
-                                var resiCon = response.resiContacts[i];
+                        for(var i=0, j=response.resContacts.length; i<j; i++){
+                                var resCon = response.resContacts[i];
                                 $('' +
                                         '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">'+
                                                 '<div data-role="collapsible" data-theme="b" data-collapsed="true">'+
-                                                        '<H1>' + resiCon.lname + ', ' + resiContacts.fname + '</H1>'+
-                                                        '<p>' + resiCon.street + '</p>'+
-                                                        '<p>' + resiCon.city + '</p>'+
-                                                        '<p>' + resiCon.state + '</p>'+
-                                                        '<p>' + resiCon.zip + '</p>'+
-                                                        '<p>' + resiCon.phone + '</p>'+
-                                                        '<p>' + resiCon.email + '</p>'+
+                                                        '<H1>' + resCon.lname + ', ' + resCon.fname + '</H1>'+
+                                                        '<p>' + resCon.street + '</p>'+
+                                                        '<p>' + resCon.city + '</p>'+
+                                                        '<p>' + resCon.state + '</p>'+
+                                                        '<p>' + resCon.zip + '</p>'+
+                                                        '<p>' + resCon.phone + '</p>'+
+                                                        '<p>' + resCon.email + '</p>'+
                                                 '</div>'+
                                         '</div>'
                                 ).appendTo('#residPage')
+                        };
+                }
+        });
+        
+        
+        $.ajax({
+                url:      'xhr/list2.xml',
+                type:     'GET',
+                dataType: 'xml',
+                success:  function(response){                                                                                    
+                        for(var i=0, j=response.commClients.length; i<j; i++){
+                                var commCl = response.commClients[i];
+                                $( '' +
+                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">' +
+                                                '<div data-role="collapsible" data-theme="b" data-collapsed="true">' +
+                                                        '<H1>' + 'commCl.lname' + ', ' + 'commCl.fname' + '</H1>' +
+                                                        '<p>' + 'commCl.street' + '</p>' +
+                                                        '<p>' + 'resCon.zip' + '</p>' +
+                                                '</div>' +
+                                        '</div>'
+                                ).appendTo('#commPage')
                         };
                 }
         });
