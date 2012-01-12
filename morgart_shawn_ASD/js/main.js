@@ -18,7 +18,7 @@ $(function(){
                                 $('' +
                                         '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="c" id="resid">'+
                                                 '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
-                                                        '<H1>' + resCon.lname + ' ,' + resCon.fname + '</H1>'+
+                                                        '<H1>' + resCon.lname + ', ' + resCon.fname + '</H1>'+
                                                         '<p>' + resCon.street + '</p>'+
                                                         '<p>' + resCon.city + '</p>'+
                                                         '<p>' + resCon.state + '</p>'+
@@ -42,27 +42,30 @@ $(function(){
                 url:      'xhr/list2.xml',
                 type:     'GET',
                 dataType: 'xml',
-                success:  function(response){
-                        /*
-                        for(var i=0, j=response.commClients.length; i<j; i++){
-                                var commCl = response.commClients[i];
+                success:  'XMLparser',
+                error:    function(xhr, ajaxOptions, thrownError){
+                                alert(xhr.status);
+                                alert(thrownError);
+                }
+        });
+        
+        
+        function xmlParser(xml){
+                        for(var i=0, j=xml.commClients.length; i<j; i++){
+                                var commCl = xml.commClients[i];
                                 $( '' +
                                         '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">' +
                                                 '<div data-role="collapsible" data-theme="b" data-collapsed="true">' +
                                                         '<H1>' + 'commCl.lname' + ', ' + 'commCl.fname' + '</H1>' +
                                                         '<p>' + 'commCl.street' + '</p>' +
-                                                        '<p>' + 'resCon.zip' + '</p>' +
+                                                        '<p>' + 'commCl.zip' + '</p>' +
                                                 '</div>' +
                                         '</div>'
                                 ).appendTo('#commPage')
                         };
-                        */
-                },
-                error:function(xhr, ajaxOptions, thrownError){
-                    alert(xhr.status);
-                    alert(thrownError);
+
                 }
-        });
+          
 
         // Form Validation for "General Data" tab on "Add New Client" page.
 
