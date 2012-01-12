@@ -5,18 +5,20 @@
 //Wait until the DOM is ready.
 
 $(function(){
+
+// GET data from JSON file.
         
         $.ajax({
                 url:      'xhr/list.json',
                 type:     'GET',
                 dataType: 'json',
-                success:  function(response){                                                                                    
+                success:  function(response){                      
                         for(var i=0, j=response.resContacts.length; i<j; i++){
                                 var resCon = response.resContacts[i];
                                 $('' +
-                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">'+
-                                                '<div data-role="collapsible" data-theme="b" data-collapsed="true">'+
-                                                        '<H1>' + resCon.lname + ', ' + resCon.fname + '</H1>'+
+                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="c" id="resid">'+
+                                                '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
+                                                        '<H1>' + resCon.lname + ' ,' + resCon.fname + '</H1>'+
                                                         '<p>' + resCon.street + '</p>'+
                                                         '<p>' + resCon.city + '</p>'+
                                                         '<p>' + resCon.state + '</p>'+
@@ -27,7 +29,12 @@ $(function(){
                                         '</div>'
                                 ).appendTo('#residPage')
                         };
+                },
+                error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
                 }
+
         });
         
         
@@ -35,7 +42,8 @@ $(function(){
                 url:      'xhr/list2.xml',
                 type:     'GET',
                 dataType: 'xml',
-                success:  function(response){                                                                                    
+                success:  function(response){
+                        /*
                         for(var i=0, j=response.commClients.length; i<j; i++){
                                 var commCl = response.commClients[i];
                                 $( '' +
@@ -48,6 +56,11 @@ $(function(){
                                         '</div>'
                                 ).appendTo('#commPage')
                         };
+                        */
+                },
+                error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
                 }
         });
 
