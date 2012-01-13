@@ -37,35 +37,34 @@ $(function(){
 
         });
         
-        
+// Parse XML data.
+
         $.ajax({
                 url:      'xhr/list2.xml',
                 type:     'GET',
                 dataType: 'xml',
-                success:  'XMLparser',
-                error:    function(xhr, ajaxOptions, thrownError){
-                                alert(xhr.status);
-                                alert(thrownError);
+                success:  function (response){
+                        $(response).find("client").each(function(){
+                                $('' +
+                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">' +
+                                                '<div data-role="collapsible" data-theme="b" data-collapsed="true">' +
+                                                        '<H1>' + $(this).find("lname").text() + ', ' + $(this).find("fname").text() + '<H1>' +
+                                                '</div>' +
+                                        '</div>'
+                                ).appendTo('#commPage')
+                        });
                 }
         });
         
         
-        function xmlParser(xml){
-                        for(var i=0, j=xml.commClients.length; i<j; i++){
-                                var commCl = xml.commClients[i];
-                                $( '' +
-                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">' +
-                                                '<div data-role="collapsible" data-theme="b" data-collapsed="true">' +
-                                                        '<H1>' + 'commCl.lname' + ', ' + 'commCl.fname' + '</H1>' +
-                                                        '<p>' + 'commCl.street' + '</p>' +
-                                                        '<p>' + 'commCl.zip' + '</p>' +
-                                                '</div>' +
-                                        '</div>'
-                                ).appendTo('#commPage')
-                        };
+        
 
-                }
-          
+
+
+
+
+
+
 
         // Form Validation for "General Data" tab on "Add New Client" page.
 

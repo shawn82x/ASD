@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <commClients>
-  <client category="Commercial">
+  <client category="Commercial" id="1">
     <fname>Steve</fname>
     <lname>Jobs</lname>
-    <street>1 Infinite Loop</street>
-    <zip>98765</zip>
   </client>
-  <client category="Commercial">
+  <client category="Commercial" id="2">
     <fname>Bill</fname>
     <lname>Gates</lname>
-    <street>2 Microsoft Lane</street>
-    <zip>87654</zip>
   </client>
-  <client category="Commercial">
+  <client category="Commercial" id="3">
     <fname>Mark</fname>
     <lname>Zuckerburg</lname>
-    <street>3 Facebook Place</street>
-    <zip>76543</zip>
   </client>
-  <client category="Commercial">
+  <client category="Commercial" id="4">
     <fname>Jeff</fname>
     <lname>Bezos</lname>
-    <street>4 Amazon Trail</street>
-    <zip>76543</zip>
   </client>
-  <client category="Commercial">
+  <client category="Commercial" id="5">
     <fname>Sergy</fname>
     <lname>Brin</lname>
-    <street>5 Google Plus</street>
-    <zip>76543</zip>
   </client>
 </commClients>
