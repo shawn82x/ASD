@@ -36,7 +36,7 @@
             <li data-role="divider" data-inset="true" data-theme="c">Browse Saved Clients</li>
             <li data-icon="home"><a href="#residPage">JSON DATA</a></li>
             <li data-icon="grid"><a href="#commPage">XML DATA</a></li>          
-	    <li data-icon="star"><a href="#firePage">All Clients: (by date)</a></li>
+	    <li data-icon="star"><a href="#firePage">CSV DATA</a></li>
             <li data-icon="plus"><a href="#mediPage">Medical Alert</a></li>
             <li data-icon="gear"><a href="#potePage">Takeovers</a></li>
 	    <li data-role="divider" data-inset="true" data-theme="c">Github Link</li>
@@ -314,7 +314,7 @@
 <!-- RESIDENTIAL CLIENTS LIST PAGE -->    
     <div data-role="page" id="residPage" data-add-back-btn="true" data-theme="a">
         <div data-role="header" data-position="fixed">
-	    <H1>Residential:</H1>
+	    <H1>JSON DATA</H1>
 	</div>
 	<!-- JS/Ajax inserts JSON Data here -->
     </div>
@@ -324,7 +324,7 @@
 <!-- COMMERCIAL CLIENTS LIST PAGE --> 
     <div data-role="page" id="commPage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
-	    <H1>Commercial:</H1>
+	    <H1>XML DATA</H1>
 	</div>
 	<!-- JS/Ajax inserts XML Data here -->
     </div>
@@ -334,161 +334,10 @@
 <!-- FIRE MONITORING CLIENTS LIST PAGE --> 
     <div data-role="page" id="firePage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
-	    <H1>All Clients: (by date)</H1>
+	    <H1>CSV DATA</H1>
 	</div>
 	<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="firemon">
-	
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-	        <h3>John Doe</h3>
-	        <h5>11-10-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541	</p>
-		    <p>Phone: 321-654-9874</p>
-		    <p>email: john@doe.com</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>Jane Doe</h3>
-		<h5>11-08-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>Dan Doe</h3>
-		<h5>11-07-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>William Doe</h3>
-		<h5>11-05-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>Mary Doe</h3>
-		<h5>11-05-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>Luke Doe</h3>
-		<h5>11-04-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>Mike Doe</h3>
-		<h5>11-03-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>John Doe</h3>
-		<h5>11-02-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>John Doe</h3>
-		<h5>10-30-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	    <div data-role="collapsible" data-theme="b" data-collapsed="true">
-		<h3>John Doe</h3>
-		<h5>10-28-11</h5>
-		<div data-role="fieldcontain">
-		    <label for="client1" class="ui-hidden-accessible" ></label>
-		    <p>First Name: John	</p>
-		    <p>Last Name: Doe	</p>
-		    <p>Street: 1234 Main St.</p>
-		    <p>City: Anytown	</p>
-		    <p>State: ThisState	</p>
-		    <p>Zip: 78541		</p>
-		    <p>Phone: 321-654-9874	</p>
-		    <p>email: john@doe.com	</p>
-		</div>    
-	    </div>
-	
+	<!-- CSV DATA inserts here -->
 	</div>
     
 <!-- MEDICAL ALERT CLIENTS LIST PAGE --> 
