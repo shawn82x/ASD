@@ -8,8 +8,8 @@ $(function(){
 
 // GET data from JSON file.
         
-        $.ajax({
-                url:      'xhr/list.json',
+/*        $.ajax({
+                url:      '127.0.0.1:5984/sales_college_pbdb/_all_docs?include_docs=true&start_key="com:"&end_key="com:zzzzz"',
                 type:     'GET',
                 dataType: 'json',
                 success:  function(response){                      
@@ -27,16 +27,28 @@ $(function(){
                                                         '<p>' + resCon.email + '</p>'+
                                                 '</div>'+
                                         '</div>'
-                                ).appendTo('#residPage')
-                        };
+        
+                success: function(data) {
+                        $.each(data.rows, function(index, com){
+                            var accType = com.doc.accType;
+                            var fname   = com.doc.fname;
+                            var lname   = com.doc.lname;
+                            var street  = com.doc.street;
+                            var city    = com.doc.city;
+                            var zip     = com.doc.zip;
+                            var phone   = com.doc.phone;
+                            var email   = com.doc.email;
+                            $('#residPage').append(
+                                    $('<li>').append(
+                                            $('<a>').attr("href", "#").text(lname + " ," + fname)
+                                    )
+                            );
+                        });
+                $('#programlist').listview('refresh');
                 },
-                error:function(xhr, ajaxOptions, thrownError){
-                    alert(xhr.status);
-                    alert(thrownError);
-                }
 
         });
-        
+*/        
 // Parse XML data.
 
         $.ajax({
