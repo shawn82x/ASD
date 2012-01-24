@@ -1,18 +1,18 @@
 $(document).ready(function() {
 	$.ajax({
-		"url": '/sales_college_pbdb/_all_docs?include_docs=true&start_key="res:"&end_key="res:zzzzz"',
+		"url": '_view/residential',
 		"dataType": "json",
 		"success": function(data) {
 			$.each(data.rows, function(index, com){
-				var accType = com.doc.accType;
-				var fname   = com.doc.fname;
-				var lname   = com.doc.lname;
-				var street  = com.doc.street;
-				var city    = com.doc.city;
-				var state   = com.doc.state;
-				var zip     = com.doc.zip;
-				var phone   = com.doc.phone;
-				var email   = com.doc.email;
+				var accType = com.value.accType;
+				var fname   = com.value.fname;
+				var lname   = com.value.lname;
+				var street  = com.value.street;
+				var city    = com.value.city;
+				var state   = com.value.state;
+				var zip     = com.value.zip;
+				var phone   = com.value.phone;
+				var email   = com.value.email;
 				$('#reslist').append(
 						$('' +
 								'<div>' +
@@ -39,19 +39,19 @@ $(document).ready(function() {
 	
 	
 	$.ajax({
-		"url": '/sales_college_pbdb/_all_docs?include_docs=true&start_key="com:"&end_key="com:zzzzz"',
+		"url": '_view/commercial',
 		"dataType": "json",
 		"success": function(data) {
 			$.each(data.rows, function(index, com){
-				var accType = com.doc.accType;
-				var fname   = com.doc.fname;
-				var lname   = com.doc.lname;
-				var street  = com.doc.street;
-				var city    = com.doc.city;
-				var state   = com.doc.state;
-				var zip     = com.doc.zip;
-				var phone   = com.doc.phone;
-				var email   = com.doc.email;
+				var accType = com.value.accType;
+				var fname   = com.value.fname;
+				var lname   = com.value.lname;
+				var street  = com.value.street;
+				var city    = com.value.city;
+				var state   = com.value.state;
+				var zip     = com.value.zip;
+				var phone   = com.value.phone;
+				var email   = com.value.email;
 				$('#comlist').append(
 						$('' +
 								'<div>' +
@@ -78,19 +78,19 @@ $(document).ready(function() {
 	
 	
 	$.ajax({
-		"url": '/sales_college_pbdb/_all_docs?include_docs=true&start_key="fir:"&end_key="fir:zzzzz"',
+		"url": '_view/fire',
 		"dataType": "json",
 		"success": function(data) {
 			$.each(data.rows, function(index, com){
-				var accType = com.doc.accType;
-				var fname   = com.doc.fname;
-				var lname   = com.doc.lname;
-				var street  = com.doc.street;
-				var city    = com.doc.city;
-				var state   = com.doc.state;
-				var zip     = com.doc.zip;
-				var phone   = com.doc.phone;
-				var email   = com.doc.email;
+				var accType = com.value.accType;
+				var fname   = com.value.fname;
+				var lname   = com.value.lname;
+				var street  = com.value.street;
+				var city    = com.value.city;
+				var state   = com.value.state;
+				var zip     = com.value.zip;
+				var phone   = com.value.phone;
+				var email   = com.value.email;
 				$('#firlist').append(
 						$('' +
 								'<div>' +
