@@ -1,7 +1,7 @@
-// Fire Monitoring
+// Takeover
 
 function (doc) {
-	if (doc._id.substr(0, 4) === "fir:"){
+	if (doc._id.substr(0,4) === "tak:") {
 		emit(doc._id.substr(4), {
 			"accType": doc.accType,
 			"fname": doc.fname,

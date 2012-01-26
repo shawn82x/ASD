@@ -1,7 +1,7 @@
-// Fire Monitoring
+// Medical
 
 function (doc) {
-	if (doc._id.substr(0, 4) === "fir:"){
+	if (doc._id.substr(0,4) === "med:") {
 		emit(doc._id.substr(4), {
 			"accType": doc.accType,
 			"fname": doc.fname,

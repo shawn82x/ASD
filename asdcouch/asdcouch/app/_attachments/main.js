@@ -22,12 +22,12 @@ $(document).ready(function() {
                                         '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
                                                 '<H2>' + lname + ', ' + fname + '</H2>'+
                                                 	'<ul>' +
-		                                                '<li>' + "Street:" + street + '</li>'+
-		                                                '<li>' + "City:" + city + '</li>'+
-		                                                '<li>' + "State:" + state + '</li>'+
-		                                                '<li>' + "Zip:" + zip + '</li>'+
-		                                                '<li>' + "Phone:" + phone + '</li>'+
-		                                                '<li>' + "Email:" + email + '</li>'+
+		                                                '<li>' + "Street:" + " " + street + '</li>'+
+		                                                '<li>' + "City:" + " " + city + '</li>'+
+		                                                '<li>' + "State:" + " " + state + '</li>'+
+		                                                '<li>' + "Zip:" + " " + zip + '</li>'+
+		                                                '<li>' + "Phone:" + " " + phone + '</li>'+
+		                                                '<li>' + "Email:" + " " + email + '</li>'+
 		                                            '</ul>' +
                                         '</div>'+
                                 '</div>'
@@ -61,12 +61,12 @@ $(document).ready(function() {
                                         '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
                                                 '<H2>' + lname + ', ' + fname + '</H2>'+
                                                 	'<ul>' +
-		                                                '<li>' + "Street:" + street + '</li>'+
-		                                                '<li>' + "City:" + city + '</li>'+
-		                                                '<li>' + "State:" + state + '</li>'+
-		                                                '<li>' + "Zip:" + zip + '</li>'+
-		                                                '<li>' + "Phone:" + phone + '</li>'+
-		                                                '<li>' + "Email:" + email + '</li>'+
+	                                                	'<li>' + "Street:" + " " + street + '</li>'+
+		                                                '<li>' + "City:" + " " + city + '</li>'+
+		                                                '<li>' + "State:" + " " + state + '</li>'+
+		                                                '<li>' + "Zip:" + " " + zip + '</li>'+
+		                                                '<li>' + "Phone:" + " " + phone + '</li>'+
+		                                                '<li>' + "Email:" + " " + email + '</li>'+
 		                                            '</ul>' +
                                         '</div>'+
                                 '</div>'
@@ -100,12 +100,12 @@ $(document).ready(function() {
                                         '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
                                                 '<H2>' + lname + ', ' + fname + '</H2>'+
                                                 	'<ul>' +
-		                                                '<li>' + "Street:" + street + '</li>'+
-		                                                '<li>' + "City:" + city + '</li>'+
-		                                                '<li>' + "State:" + state + '</li>'+
-		                                                '<li>' + "Zip:" + zip + '</li>'+
-		                                                '<li>' + "Phone:" + phone + '</li>'+
-		                                                '<li>' + "Email:" + email + '</li>'+
+	                                                	'<li>' + "Street:" + " " + street + '</li>'+
+		                                                '<li>' + "City:" + " " + city + '</li>'+
+		                                                '<li>' + "State:" + " " + state + '</li>'+
+		                                                '<li>' + "Zip:" + " " + zip + '</li>'+
+		                                                '<li>' + "Phone:" + " " + phone + '</li>'+
+		                                                '<li>' + "Email:" + " " + email + '</li>'+
 		                                            '</ul>' +
                                         '</div>'+
                                 '</div>'
@@ -138,12 +138,12 @@ $(document).ready(function() {
                                         '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
                                                 '<H2>' + lname + ', ' + fname + '</H2>'+
                                                 	'<ul>' +
-		                                                '<li>' + "Street:" + street + '</li>'+
-		                                                '<li>' + "City:" + city + '</li>'+
-		                                                '<li>' + "State:" + state + '</li>'+
-		                                                '<li>' + "Zip:" + zip + '</li>'+
-		                                                '<li>' + "Phone:" + phone + '</li>'+
-		                                                '<li>' + "Email:" + email + '</li>'+
+	                                                	'<li>' + "Street:" + " " + street + '</li>'+
+		                                                '<li>' + "City:" + " " + city + '</li>'+
+		                                                '<li>' + "State:" + " " + state + '</li>'+
+		                                                '<li>' + "Zip:" + " " + zip + '</li>'+
+		                                                '<li>' + "Phone:" + " " + phone + '</li>'+
+		                                                '<li>' + "Email:" + " " + email + '</li>'+
 		                                            '</ul>' +
                                         '</div>'+
                                 '</div>'
@@ -176,12 +176,12 @@ $(document).ready(function() {
                                         '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
                                                 '<H2>' + lname + ', ' + fname + '</H2>'+
                                                 	'<ul>' +
-		                                                '<li>' + "Street:" + street + '</li>'+
-		                                                '<li>' + "City:" + city + '</li>'+
-		                                                '<li>' + "State:" + state + '</li>'+
-		                                                '<li>' + "Zip:" + zip + '</li>'+
-		                                                '<li>' + "Phone:" + phone + '</li>'+
-		                                                '<li>' + "Email:" + email + '</li>'+
+	                                                	'<li>' + "Street:" + " " + street + '</li>'+
+		                                                '<li>' + "City:" + " " + city + '</li>'+
+		                                                '<li>' + "State:" + " " + state + '</li>'+
+		                                                '<li>' + "Zip:" + " " + zip + '</li>'+
+		                                                '<li>' + "Phone:" + " " + phone + '</li>'+
+		                                                '<li>' + "Email:" + " " + email + '</li>'+
 		                                            '</ul>' +
                                         '</div>'+
                                 '</div>'
@@ -193,6 +193,18 @@ $(document).ready(function() {
 	});
 
 // form validation
+	$("#newclientform").validate({
+		   rules: {
+		     // simple rule, converted to {required:true}
+		     name: "required",
+		     // compound rule
+		     email: {
+		       required: true,
+		       email: true
+		     }
+		   }
+		})
+/*
 	var clform = $('#newclientform'),
     clerrorslink = $('#clerrorslink');
     
@@ -214,12 +226,13 @@ $(document).ready(function() {
 	                $("#newclienterrors ul").html(html);
 	        },
 	
-	        submitHandler: function(){
+	        submitHandler: function(form, validator){
 	            var data = clform.serializeArray();
 	            parseClientform(data);
 	        }
 	
 	});
+*/
 	
 // end	
 });

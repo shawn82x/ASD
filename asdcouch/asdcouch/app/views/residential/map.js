@@ -1,3 +1,5 @@
+// Residential
+
 function (doc) {
 	if (doc._id.substr(0, 4) === "res:"){
 		emit(doc._id.substr(4), {
