@@ -29,6 +29,12 @@ div {
 #newclbutton {
     background-image: url(images/blue-scratched-texture.jpg)
 }
+
+img {
+    margin-top: 5px;
+    width: 320px;
+    height: 100px;
+}
 /*
 form {
     margin: 20px 180px 20px 20px;
@@ -181,11 +187,7 @@ select {
     margin: 10px;
 }
 */
-img {
-    margin-top: 5px;
-    width: 320px;
-    height: 100px;
-}
+
 /*
 input { font-size: 14px; font-weight: bold;  }
 
