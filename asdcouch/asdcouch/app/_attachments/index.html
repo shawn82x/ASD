@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
     <link rel="stylesheet" href="themes/shawn_custom_themes1.min.css"/>
     <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
-<!--    <script src="libs/modernizr.custom.min.js"></script>	-->
-<!--    <script src="jquery.couch.js"></script>		-->
+    <script src="libs/modernizr.custom.min.js"></script>
+    <script src="jquery.couch.js"></script>
     <title>Shawn R. Morgart: ASD</title>
     
 </head>
@@ -169,7 +170,7 @@
                         <input data-theme="c" type="email" name="email" id="email" value="" placeholder="email@address.com" class="required email"/>
                     </div>
 		</div>
-
+<!--
 		<div data-role="collapsible" data-theme="b" >
 		    <h3>Representational Style</h3>
 		    <fieldset data-role="controlgroup">
@@ -287,48 +288,45 @@
 		    <label for="textarea"></label>
 		    <textarea cols="40" rows="8" name="textarea" id="textarea" data-theme="c" placeholder="house type, special/current equipment, etc..."></textarea>
 		</div>
-
+-->
 	
 	    <div data-role="fieldcontain">
-		<div class="ui-grid-a">
-		    <div class="ui-block-a"><input type="submit" value="Save Client" data-theme="a" id="savecl"/></div>
-		    <div class="ui-block-b"></div>
-		</div>
+			<div class="ui-grid-a">
+			    <div class="ui-block-a"><input type="submit" value="Save Client" data-theme="a" id="savecl"/></div>
+			    <div class="ui-block-b"></div>
+			</div>
 	    </div>
 	    <div data-role="fieldcontain">
-		<div class="ui-grid-a">
-		    <div class="ui-block-a"><input type="reset" value="Clear Form" data-theme="e" id="clearcl" /></div>
-		    <div class="ui-block-b"></div>
-		</div>
+			<div class="ui-grid-a">
+			    <div class="ui-block-a"><input type="reset" value="Clear Form" data-theme="e" id="clearcl" /></div>
+			    <div class="ui-block-b"></div>
+			</div>
 	    </div>
-		<a href="#newclienterrors" id="clerrorslink" data-rel="dialog" data-transition="pop" >open errors</a>
+			<a href="#newclienterrors" id="clerrorslink" data-rel="dialog" data-transition="pop" >open errors</a>
 	    </div>
 	</form>
 	
-	<div data-role="footer" >
+		<div data-role="footer" >
             <h3>Successful Behavior Institute</h3>
-	    <h3>Sales College of Northwest Ohio</h3>        
+	    	<h3>Sales College of Northwest Ohio</h3>        
         </div>
     
     </div>
 
         
 <!-- RESIDENTIAL CLIENTS LIST PAGE -->    
-    <div data-role="page" id="residPage" data-add-back-btn="true" data-theme="a">
+    <div data-role="page" id="residPage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
-	    <H1>Residential</H1>
-	</div>
-	<!-- JS/Ajax inserts JSON Data here -->
+	    	<H1>Residential</H1>
+		</div>
     </div>
-    
 
 
 <!-- COMMERCIAL CLIENTS LIST PAGE --> 
     <div data-role="page" id="commPage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
 	    <H1>Commercial</H1>
-	</div>
-	<!-- JS/Ajax inserts XML Data here -->
+		</div>
     </div>
     
     
@@ -337,41 +335,34 @@
     <div data-role="page" id="firePage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
 	    <H1>Fire Monitoring</H1>
+		</div>
 	</div>
-	<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="firemon">
-	<!-- CSV DATA inserts here -->
-	</div>
+	
     
 <!-- MEDICAL ALERT CLIENTS LIST PAGE --> 
     <div data-role="page" id="mediPage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
 	    <H1>Medical Alert:</H1>
-	</div>
-
-    </div>
-    
+		</div>
     </div>
 
 <!-- TAKEOVER CLIENTS LIST PAGE --> 
     <div data-role="page" id="potePage" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
 	    <H1>Takeovers:</H1>
-	</div>
-
-    </div>
-    
+		</div>
     </div>
     
 <!--  Pop-up Validation Page -->    
     <div data-role="dialog" id="newclienterrors">
-	<div data-role="header" data-position="fixed">
-	    <h3>Missing Fields</h3>
-	</div>
-	<div data-role="content">
-	    <ul>
-		<li>Test.</li>
-	    </ul>
-	</div>
+		<div data-role="header" data-position="fixed">
+		    <h3>Missing Fields</h3>
+		</div>
+		<div data-role="content">
+		    <ul>
+			<li>Test.</li>
+		    </ul>
+		</div>
     </div>
 	
     
@@ -381,5 +372,6 @@
 <!--    <script type="text/javascript" src="libs/jquery.validate.min.js"></script>		-->
 <!--    <script type="text/javascript" src="libs/additional-methods.min.js"></script>	-->
     <script type="text/javascript" src="main.js" ></script>
+    
 </body>
 </html>

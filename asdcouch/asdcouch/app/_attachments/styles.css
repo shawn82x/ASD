@@ -1,0 +1,37 @@
+
+/*
+title: additem.html Styles
+author: Shawn R. Morgart
+for: Visual Frameworks 1110: Project 2
+*/
+#clerrorslink{display: none;}
+
+a.#savecl {
+    font-size: small;
+}
+
+a.#clearfields {
+    font-size: small;
+    margin: 20px 0px 0px 0px;
+}
+
+label.error {display: block; margin: 10px 0; color: #cc0000;}
+
+#mainlist.ui-li-icon {
+    background-size: 1px 1px;
+}
+
+div {
+    background-image: url(images/blue-scratched-texture.jpg);  
+
+}
+
+#newclbutton {
+    background-image: url(images/blue-scratched-texture.jpg)
+}
+
+img {
+    margin-top: 5px;
+    width: 320px;
+    height: 100px;
+}
