@@ -1,27 +1,33 @@
-$("#savecl").live( "click", function( event ) {
-        event.preventDefault();
-        var document = {};
-        document.accType = $("input#addaccTypeField").val();
-        document.fname = $("input#addfnameField").val();
-        document.lname = $("textarea#addlnameField").val();
-        document.street = $("textarea#addstreetField").val();
-        document.city = $("textarea#addcityField").val();
-        document.state = $("textarea#addstateField").val();
-        document.zip = $("textarea#addzipField").val();
-        document.phone = $("textarea#addphoneField").val();
-        document.email = $("textarea#addemailField").val();
-        
-        document.creation_date = ( new Date() ).getTime();
-        $.couch.db("sales_college_pbdb").saveDoc( document, {
-                success: function() {
-                    $.mobile.changePage( "#newclPage", "slidedown", true, true );
-                },
-                error: function() {
-                    alert( "Cannot save new document." );
-                 }
-        });
-        return false;
-    });
+$(function(){
+	
+	
+	$CouchApp(function(app) {
+		app.loggedInNow(function(login) {
+			var postForm = app.docForm("form#new-post", {
+				id : document.location.hash.replace('#',''),
+				fields : ["title", "body"],
+				template : {
+					type : "post",
+					format : "markdown",
+					author : login
+				},
+				onLoad : function(doc) {
+					if (doc._id) {
+						$('h1').html('Editing #<a href="post.html#'+doc._id+'">'+doc._id+'</a>');
+						B.setupDeleteHandler(postForm);
+					}
+					$('label[for=body]').append(' <em>with '+(doc.format||'html')+'</em>');
+				},
+				beforeSave : B.preparePostForSave,
+				success : function(resp) {
+					$("#saved").text("Saved _rev: "+resp.rev).fadeIn(500).fadeOut(3000);
+					$('h1').html('Editing #<a href="post.html#'+resp.id+'">'+resp.id+'</a>');
+				}
+			}); function() {
+				B.redirectToLoginPage();
+			};
+		});
+	});
 
 // Display Residential Data
 
@@ -249,7 +255,7 @@ $("#savecl").live( "click", function( event ) {
 		});
 
 // form validation
-/* 
+/*
 	$("#newclientform").validate({
 		   rules: {
 		     // simple rule, converted to {required:true}
@@ -260,7 +266,8 @@ $("#savecl").live( "click", function( event ) {
 		       email: true
 		     }
 		   }
-		})
+		});
+		
 
 	var clform = $('#newclientform'),
     clerrorslink = $('#clerrorslink');
@@ -290,4 +297,5 @@ $("#savecl").live( "click", function( event ) {
 	
 	});
 */
+});
 
