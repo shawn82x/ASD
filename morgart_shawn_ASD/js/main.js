@@ -8,105 +8,30 @@ $(function(){
 
 // GET data from JSON file.
         
-/*        $.ajax({
-                url:      '127.0.0.1:5984/sales_college_pbdb/_all_docs?include_docs=true&start_key="com:"&end_key="com:zzzzz"',
+        $.ajax({
+                url:      'xhr/list.json',
                 type:     'GET',
                 dataType: 'json',
                 success:  function(response){                      
-                        for(var i=0, j=response.resContacts.length; i<j; i++){
-                                var resCon = response.resContacts[i];
+                        for(var i=0, j=response.savedContacts.length; i<j; i++){
+                                var savedClients = response.savedContacts[i];
                                 $('' +
                                         '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="c" id="resid">'+
                                                 '<div data-role="collapsible" data-theme="a" data-collapsed="true">'+
-                                                        '<H1>' + resCon.lname + ', ' + resCon.fname + '</H1>'+
-                                                        '<p>' + resCon.street + '</p>'+
-                                                        '<p>' + resCon.city + '</p>'+
-                                                        '<p>' + resCon.state + '</p>'+
-                                                        '<p>' + resCon.zip + '</p>'+
-                                                        '<p>' + resCon.phone + '</p>'+
-                                                        '<p>' + resCon.email + '</p>'+
+                                                        '<H1>' + savedClients.lname + ', ' + savedClients.fname + '</H1>'+
+                                                        '<p>' + savedClients.street + '</p>'+
+                                                        '<p>' + savedClients.city + '</p>'+
+                                                        '<p>' + savedClients.state + '</p>'+
+                                                        '<p>' + savedClients.zip + '</p>'+
+                                                        '<p>' + savedClients.phone + '</p>'+
+                                                        '<p>' + savedClients.email + '</p>'+
                                                 '</div>'+
                                         '</div>'
-        
-                success: function(data) {
-                        $.each(data.rows, function(index, com){
-                            var accType = com.doc.accType;
-                            var fname   = com.doc.fname;
-                            var lname   = com.doc.lname;
-                            var street  = com.doc.street;
-                            var city    = com.doc.city;
-                            var zip     = com.doc.zip;
-                            var phone   = com.doc.phone;
-                            var email   = com.doc.email;
-                            $('#residPage').append(
-                                    $('<li>').append(
-                                            $('<a>').attr("href", "#").text(lname + " ," + fname)
-                                    )
-                            );
-                        });
-                $('#programlist').listview('refresh');
-                },
-
-        });
-*/        
-// Parse XML data.
-
-        $.ajax({
-                url:      'xhr/list2.xml',
-                type:     'GET',
-                dataType: 'xml',
-                success:  function (response){
-                        $(response).find("client").each(function(){
-                                $('' +
-                                        '<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="resid">' +
-                                                '<div data-role="collapsible" data-theme="b" data-collapsed="true">' +
-                                                        '<H1>' + $(this).find("lname").text() + ', ' + $(this).find("fname").text() + '<H1>' +
-                                                '</div>' +
-                                        '</div>'
-                                ).appendTo('#commPage')
-                        });
+                                ).appendTo('#savedPage')
+                        };
+                        $('#programlist').listview('refresh');
                 }
         });
-        
-        
-        
-// CSV data.
-        $.ajax({
-                type:      'GET', 
-                url:       'xhr/list3.csv', 
-                dataType:  'text', 
-                success:   function(text) {
-                        var fields = text.split(/\n/);
-                                fields.pop(fields.length-1); 
-                        var headers = fields[0].split(','),
-                                html = '<table>'; html += '<tr>';
-                        
-                        for(var i = 0; i < headers.length; i += 1) { 
-                                html += '<th scope="col">' + headers[i] + '</th>'; 
-                        } 
-                        
-                        html += '</tr>'; 
-                        
-                        var data = fields.slice(1, fields.length); 
-                        
-                        for(var j = 0; j < data.length; j += 1) { 
-                                var dataFields = data[j].split(','); 
-                                html += '<tr>'; 
-                                html += '<td>' + dataFields[0] + '</td>'; 
-                                html += '<td>' + dataFields[1] + '</td>'; 
-                                html += '<td>' + dataFields[2] + '</td>'; 
-                                html += '</tr>'; 
-                        } 
-                        
-                        html += '</table>'; 
-                        
-                        $(html).appendTo('#firePage');
-                }
-        }); 
-
-
-
-
 
 
         // Form Validation for "General Data" tab on "Add New Client" page.
@@ -137,6 +62,51 @@ $(function(){
                     parseClientform(data);
                 }
         
+        });
+        
+        $('#newclientform').submit(function(){
+                var obj = {};
+                obj.lname = 'lname';
+                obj.fname = 'fname';
+                obj.street = 'street';
+                obj.city = 'city';
+                obj.state = 'state';
+                obj.zip = 'zip';
+                obj.phone = 'phone';
+                obj.email = 'email';
+                
+                obj.repStyle = 'repStyle';
+                
+                obj.direction = 'direction';
+                obj.source = 'source';
+                obj.reason = 'reason';
+                obj.level = 'level';
+                obj.scope = 'scope';
+                obj.change = 'change';
+                
+                obj.channel = 'channel';
+                
+                obj.convincers = 'convincers';
+                
+                obj.theor = 'theor';
+                obj.util = 'util';
+                obj.aesth = 'aesth';
+                obj.soci = 'soci';
+                obj.indiv = 'indiv';
+                obj.trad = 'trad';
+                
+                obj.socStyle = 'socStyle';
+                
+                obj.dom = 'dom';
+                obj.inf = 'inf';
+                obj.stead = 'stead';
+                obj.comp = 'comp';
+                
+                obj.textarea = 'textarea';
+                
+                alert('Submit Client?');
+                return false;
+
         });
     
 });

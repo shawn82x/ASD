@@ -25,23 +25,15 @@
         <div data-role="header" data-theme="b">
             <label for="search-basic" class="ui-hidden-accessible" data-theme="b">Search for Client</label>
             <input type="search" name="search" id="search-basic" value="" data-theme="b" placeholder="Search for Client"/>
-    <img src="images/key_visual1.jpg" />
+	    <img src="images/key_visual1.jpg" />
         </div>
         
         <div data-role="content" id="newclbutton">
             <p><a href="#newclPage" data-role="button" data-theme="b" >Add New Client Profile!</a></p>
         </div>
-
-        <ul data-role="listview" data-inset="true" data-theme="a" data-count-theme="a" id="mainlist">
-            <li data-role="divider" data-inset="true" data-theme="c">Browse Saved Clients</li>
-            <li data-icon="home"><a href="#residPage">Residential Clients</a></li>
-            <li data-icon="grid"><a href="#commPage">Commercial Clients</a></li>          
-	    <li data-icon="star"><a href="#firePage">Fire Monitoring Clients</a></li>
-            <li data-icon="plus"><a href="#mediPage">Medical Alert</a></li>
-            <li data-icon="gear"><a href="#potePage">Takeovers</a></li>
-	    <li data-role="divider" data-inset="true" data-theme="c">Github Link</li>
-	    <li data-icon="info"><a href='https://github.com/shawn82x/asd' id="gh-master">Link to Master Code</a></li>
-        </ul>
+	<div data-role="content" id="savedclbutton">
+            <p><a href="#savedPage" data-role="button" data-theme="a" >Browse Saved Clients</a></p>
+        </div>
 
         <div data-role="footer" >
 	    <h3>Successful Behavior Institute</h3>
@@ -58,7 +50,7 @@
 	    <H1>Add New Client</H1>
 	</div>
         <form action="" method="post" id="newclientform" data-theme="b">
-	    <div data-role="fieldcontain" name="select" id="select" data-theme="b">
+<!--	    <div data-role="fieldcontain" name="select" id="select" data-theme="b">
 		<label for="acctype">Type of Account:</label>
 		<select name="acctype" data-theme="b" data-native-menu="false">
 		    <option value="chooser" selected="true">Choose (required)</option>
@@ -70,10 +62,10 @@
 		    <option value="other">Other</option>
 		</select>
 	    </div>
+-->	    
+<!--	    <div data-role="collapsible-set">		-->
 	    
-	    <div data-role="collapsible-set">
-	    
-		<div data-role="collapsible" data-theme="c" data-collapsed="false"><h3>General Data</h3>
+		<div data-role="content" data-theme="c" data-collapsed="false"><h3>General Data</h3>
                     <div data-role="fieldcontain">
                         <label for="fname" >First Name:</label>
 			<input data-theme="c" type="text" name="fname" id="fname" value="" placeholder="Jon" class="required"/>
@@ -168,7 +160,7 @@
                     </div>
 		</div>
 
-		<div data-role="collapsible" data-theme="b" >
+		<div data-role="content" data-theme="b" >
 		    <h3>Representational Style</h3>
 		    <fieldset data-role="controlgroup">
 			<legend>Ask a Thought-Provoking Question...</legend>
@@ -176,13 +168,13 @@
 				<label for="auditory">Auditory: looks side to side. Talk = Medium.</label>
 			    <input type="radio" name="repStyle" id="kines" value="kines"  />
 				<label for="kines">Kinesthetic: looks down/right. Talk = Slow. "Feeling" words.</label>
-			    <input type="radio" name="repStyle" id="visual" value="visual" checked="checked" />
+			    <input type="radio" name="repStyle" id="visual" value="visual"/>
 				<label for="visual">Visual: looks defocused or up. Talk = Fast.</label>
 		    </fieldset>
 		</div>
 	    
 
-		<div data-role="collapsible" data-theme="c" >
+		<div data-role="content" data-theme="c" >
 		    <h3>Meta-Programs</h3>
 		    <h4>(Rank -10 to 10)</h4>
 		    <label for="direction">Direction: toward vs. away:</label>
@@ -200,11 +192,11 @@
 		</div>
 	    
 
-		<div data-role="collapsible" data-theme="b" >
+		<div data-role="content" data-theme="b" >
 		    <h3>Channels</h3>
 		    <fieldset data-role="controlgroup">
 			<legend>How one best learns.</legend>
-			    <input type="radio" name="channel" id="do" value="do" checked="checked" />
+			    <input type="radio" name="channel" id="do" value="do" />
 				<label for="do">Do: Must do it or use it to be convinced.</label>
 			    <input type="radio" name="channel" id="hear" value="hear"  />
 				<label for="hear">Hear: Must hear how or hear about.</label>
@@ -216,23 +208,23 @@
 		</div>
                   
 
-		<div data-role="collapsible" data-theme="c" >    
+		<div data-role="content" data-theme="c" >    
 		    <h3>Convincers</h3>
 		    <fieldset data-role="controlgroup" data-theme="b">
 			<legend>How one most easily convinces oneself.</legend>
-			    <input type="radio" name="channel" id="overtime" value="overtime" checked="checked" />
+			    <input type="radio" name="convincers" id="overtime" value="overtime" />
 				<label for="overtime">Period of Time: data must remain Consistant.</label>
-			    <input type="radio" name="channel" id="repetition" value="repetition"  />
+			    <input type="radio" name="convincers" id="repetition" value="repetition"  />
 				<label for="repetition">Repetition: must have data a particular number of times.</label>
-			    <input type="radio" name="channel" id="automatic" value="automatic"  />
+			    <input type="radio" name="convincers" id="automatic" value="automatic"  />
 				<label for="automatic">Automatic: need partial information, assume the rest to decide.</label>
-			    <input type="radio" name="channel" id="consistent" value="consistent"  />
+			    <input type="radio" name="convincers" id="consistent" value="consistent"  />
 				<label for="consistent">Consistent: never really convinced, get info Every time.</label>
 		    </fieldset>
 		</div>
         
 
-		<div data-role="collapsible" data-theme="b" >
+		<div data-role="content" data-theme="b" >
 		    <h3>Values</h3>
 		    <h4>(Rank 0 to 100)</h4>
 			<label for="theor">Theoretical: knowledge, problem solver.</label>
@@ -250,23 +242,23 @@
 		</div>
         
 
-		<div data-role="collapsible" data-theme="c" >
+		<div data-role="content" data-theme="c" >
 		    <h3>Social Style</h3>
 		    <fieldset data-role="controlgroup">
 			<legend>(Choose the Strongest One)</legend>
-			<input type="radio" name="channel" id="driver" value="driver" checked="checked"/>
+			<input type="radio" name="socStyle" id="driver" value="driver"/>
 			    <label for="driver">Driver: work-focused / extroverted.</label>
-			<input type="radio" name="channel" id="expressive" value="expressive"  />
+			<input type="radio" name="socStyle" id="expressive" value="expressive"  />
 			    <label for="expressive">Expressive: people-focused / extroverted.</label>
-			<input type="radio" name="channel" id="amiable" value="amiable"  />
+			<input type="radio" name="socStyle" id="amiable" value="amiable"  />
 			    <label for="amiable">Amiable: people-focused / introverted.</label>
-			<input type="radio" name="channel" id="analytical" value="analytical"  />
+			<input type="radio" name="socStyle" id="analytical" value="analytical"  />
 			    <label for="analytical">Analytical: work-focused / introverted.</label>
 		    </fieldset>
 		</div>
                 
 
-		<div data-role="collapsible" data-theme="b" >
+		<div data-role="content" data-theme="b" >
 		    <h3>DISC Assessment</h3>
 		    <h4>(Rank -10 to 10)</h4>
 			<label for="dom">Dominance: calculating vs. agressive.</label>
@@ -280,7 +272,7 @@
 		</div>
 		
 
-		<div data-role="collapsible" data-theme="c">
+		<div data-role="content" data-theme="c">
 		    <h3>Notes</h3>
 		    <label for="textarea"></label>
 		    <textarea cols="40" rows="8" name="textarea" id="textarea" data-theme="c" placeholder="house type, special/current equipment, etc..."></textarea>
@@ -311,54 +303,55 @@
     </div>
 
         
-<!-- RESIDENTIAL CLIENTS LIST PAGE -->    
-    <div data-role="page" id="residPage" data-add-back-btn="true" data-theme="a">
+<!-- Saved CLIENTS LIST PAGE -->    
+    <div data-role="page" id="savedPage" data-add-back-btn="true" data-theme="a">
         <div data-role="header" data-position="fixed">
-	    <H1>Residential</H1>
+	    <H1>Saved Clients:</H1>
 	</div>
 	<!-- JS/Ajax inserts JSON Data here -->
     </div>
     
 
 
-<!-- COMMERCIAL CLIENTS LIST PAGE --> 
-    <div data-role="page" id="commPage" data-add-back-btn="true">
-        <div data-role="header" data-position="fixed">
-	    <H1>Commercial</H1>
+    <!-- COMMERCIAL CLIENTS LIST PAGE --> 
+	<div data-role="page" id="commPage" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed">
+		<H1>Commercial</H1>
+	    </div>
+	    <!-- JS/Ajax inserts XML Data here -->
 	</div>
-	<!-- JS/Ajax inserts XML Data here -->
-    </div>
+	
+	
     
+    <!-- FIRE MONITORING CLIENTS LIST PAGE --> 
+	<div data-role="page" id="firePage" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed">
+		<H1>Fire Monitoring</H1>
+	    </div>
+	    <div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="firemon">
+	    <!-- CSV DATA inserts here -->
+	    </div>
+	
+    <!-- MEDICAL ALERT CLIENTS LIST PAGE --> 
+	<div data-role="page" id="mediPage" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed">
+		<H1>Medical Alert:</H1>
+	    </div>
     
-
-<!-- FIRE MONITORING CLIENTS LIST PAGE --> 
-    <div data-role="page" id="firePage" data-add-back-btn="true">
-        <div data-role="header" data-position="fixed">
-	    <H1>Fire Monitoring</H1>
 	</div>
-	<div data-role="listview" data-inset="true" data-theme="b" data-count-theme="a" id="firemon">
-	<!-- CSV DATA inserts here -->
+	
 	</div>
     
-<!-- MEDICAL ALERT CLIENTS LIST PAGE --> 
-    <div data-role="page" id="mediPage" data-add-back-btn="true">
-        <div data-role="header" data-position="fixed">
-	    <H1>Medical Alert:</H1>
-	</div>
-
-    </div>
+    <!-- TAKEOVER CLIENTS LIST PAGE --> 
+	<div data-role="page" id="potePage" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed">
+		<H1>Takeovers:</H1>
+	    </div>
     
-    </div>
-
-<!-- TAKEOVER CLIENTS LIST PAGE --> 
-    <div data-role="page" id="potePage" data-add-back-btn="true">
-        <div data-role="header" data-position="fixed">
-	    <H1>Takeovers:</H1>
 	</div>
-
-    </div>
-    
-    </div>
+	
+	</div>
+	    
     
 <!--  Pop-up Validation Page -->    
     <div data-role="dialog" id="newclienterrors">
