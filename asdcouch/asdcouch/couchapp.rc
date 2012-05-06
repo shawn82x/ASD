@@ -5,6 +5,9 @@
     },
     "cloudant": {
       "db": "https://ezurradoolonsellingesero:tTl6dvchKow8sNM4FG7qJ22Y@smorgart.cloudant.com/asdproject"
+    },
+    "IrisCouch": {
+      "db": "http://infinite-seven.iriscouch.com/_utils/database.html?pbdb"
     }
   }
 }

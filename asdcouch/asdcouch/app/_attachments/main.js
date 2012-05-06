@@ -1,6 +1,5 @@
 $(function(){
 	
-	
 	$CouchApp(function(app) {
 		app.loggedInNow(function(login) {
 			var postForm = app.docForm("form#new-post", {

@@ -1,88 +1,151 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Shawn Morgart | AVF 1205</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
 
-  <title>shawn82x/ASD @ GitHub</title>
+  <body>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #344b9d;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #cbb462; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #cbb462; }
-    h3 { text-align: center; color: #cbb462; }
-    a { color: #cbb462; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="https://github.com/shawn82x/ASD"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/shawn82x/ASD/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/shawn82x/ASD/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Shawn Morgart | AVF 1205</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#">GH Pages</a></li>
+              <li><a href="https://github.com/shawn82x/ASD/tree/master/asdcouch/asdcouch">Github Repo</a></li>
+              <li><a href="#">Reflection Video</a></li>
+	      <li><a href="http://shawn82x.github.com/GoodApp/morgart_shawn_MiU_GoodApp/Good_index.html">Working App Old</a></li>
+	      <li><a href="https://smorgart.cloudant.com/asdproject/_design/app/index.html">Working App Currnet</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
 
-    <h1><a href="https://github.com/shawn82x/ASD">ASD</a>
-      <span class="small">by <a href="https://github.com/shawn82x">shawn82x</a></span></h1>
+    <div class="container">
 
-    <div class="description">
-      Advanced Scalable Data Infrastructures for Full Sail University
-    </div>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Shawn's CRUD App</h1>
+        <p>The mobile app I have been working on for several months now has a specific purpose with a specific client. The app is called a "Pre-Brief / De-Brief Sheet" and it is used by individuals who have studied sales techniques at the Sales College of Northwest Ohio. With a "Pre-Brief / De-Brief Sheet" one would take specific notes about their client. This helps the salesperson understand the learning style and values of the client so that they can better achieve <em>Authentic Communitcation</em>.</p>
+        <p><a class="btn btn-inverse btn-large" data-toggle="modal" href="#moreApp">Learn more about the app. &raquo;</a></p>
+      </div>
 
-    
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4" id="discussion">
+          <h2 class="disc">Discussion: Week One</h2>
+           <p class="disc">This week we discussed what native features we would like to add to our CRUD app versions in iOS and Android using only HTML and CSS. We were also asked to discuss any "lessons learned" regarding workflow. Click below to see my responses.</p>
+          <p class="disc"><a class="btn btn-inverse" data-toggle="modal" href="#disc1">View Post &raquo;</a></p>
+        </div>
+        <div class="span4" id="discussion">
+          <h2 class="disc">Discussion: Week Two</h2>
+           <p class="disc">Check back soon!</p>
+          <p class="disc"><a class="btn btn-inverse" data-toggle="modal" href="#disc2">View Post &raquo;</a></p>
+       </div>
+        <div class="span4" id="discussion">
+          <h2 class="disc">Discussion: Week Three</h2>
+          <p class="disc">Check back soon, but not as soon as Week Two.</p>
+          <p class="disc"><a class="btn btn-inverse" data-toggle="modal" href="#disc3">View Post &raquo;</a></p>
+        </div>
+      </div>
+      
+	<div class="modal hide fade in" id="disc1">
+	  <div class="modal-header">
+	    <h3>Discussion Response One</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>According to PhoneGap it appears most of the phone features are available for both platforms, at least for the new versions of iOS.</p>
+	    <p>My CRUD app is a very specific form tool for a sales training class that I have taken. It basically helps a sales rep to "profile" a client and save these values. For my app, I would like to make it link to a user's Contact information (why make them duplicate info you already have saved about the client?) The second would be the camera, as a tool for the app the camera could be used, not only to photo the client, but to photo their environment.</p>
+	    <p>Workflow... I have learned that planning is definitely important, especially when doing class and working full time. For me, workflow means to layout the idea for the app and see what it is that I intend for it to do, first. I prefer to have the background structure put together and make the app function next, then to deal with beautifying it last.</p>
+	    <p>As of yet I don't have any clear intentions for the Demo App, I will be starting on that this afternoon. For my revised version of the CRUD app, A) make it fully functional. B) Add the new features, have the app connect directly to the contacts already on the phone and offer a place to take photos and pull them back up within the app.</p>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" data-dismiss="modal" class="btn">Close</a>
+	  </div>
+	</div>
+	
+	<div class="modal hide fade in" id="disc2">
+	  <div class="modal-header">
+	    <h3>Discussion Response Two</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Coming Soon!</p>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" data-dismiss="modal" class="btn">Close</a>
+	  </div>
+	</div>
+	
+	<div class="modal hide fade in" id="disc3">
+	  <div class="modal-header">
+	    <h3>Discussion Response Three</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Coming Soon!</p>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" data-dismiss="modal" class="btn">Close</a>
+	  </div>
+	</div>
+	
+	<div class="modal hide fade in" id="moreApp">
+	  <div class="modal-header">
+	    <h3>Pre-Brief / De-Brief App Details</h3>
+	  </div>
+	  <div class="modal-body">
+	    <h3>Current Features</h3>
+	    <p>It is a convenient to use app with forms featuring buttons and sliders, neatly arranged in accordion style menus categorized for ease of use.</p>
+	    <h3>Planned Features</h3>
+	    <h4>Android & iOS</h4>
+		<ul>
+		    <li><b>Contacts Integration:</b> Why type in all that information again, in another app?</li>
+		    <li><b>Camera:</b> What does the client look like? What about their surroundings?</li>
+		    <li><b>Media:</b> Record the interview for later listening.</li>
+		</ul>
+	    <h4>Android Only</h4>
+		<ul>
+		    <li>Unsure at this point.</li>
+		</ul>
+	    <h4>iOS Only</h4>
+		<ul>
+		    <li>Unsure at this point.</li>
+		</ul>
+	    
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" data-dismiss="modal" class="btn">Close</a>
+	  </div>
+	</div>
+	
+	<hr>
 
-    
+    </div> <!-- /container -->
 
-    
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
 
-    
-
-    
-      <h2>Authors</h2>
-      <p>Shawn (halcyon@fullsail.edu)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Shawn Morgart (halcyon@fullsail.edu)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/shawn82x/ASD/zipball/master">zip</a> or
-      <a href="https://github.com/shawn82x/ASD/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/shawn82x/ASD</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/shawn82x/ASD">shawn82x/ASD</a>
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
