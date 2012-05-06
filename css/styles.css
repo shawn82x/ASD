@@ -1,6 +1,5 @@
 
 
-
 .wrap {
     width: 95%;
     margin: auto;
@@ -40,7 +39,7 @@ aside {
 }
 
 body {
-    background-image: url(../img/corkBoard.jpg);
+    background-image: url(../img/CorkBoard.jpg);
 }
 
 #discussion {
